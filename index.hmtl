@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles H. Foster - Teaching Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Charles H. Foster</h1>
+            <p class="subtitle">PhD Candidate in English | Michigan State University</p>
+            <p class="tagline">Certificate in College Teaching Portfolio</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/philosophy.html">Teaching Philosophy</a></li>
+                <li class="dropdown">
+                    <a href="pages/competencies.html">Core Competencies</a>
+                    <ul class="dropdown-content">
+                        <li><a href="pages/competencies.html#learning">Understanding Learning</a></li>
+                        <li><a href="pages/competencies.html#environment">Inclusive Environment</a></li>
+                        <li><a href="pages/competencies.html#assessment">Assessment</a></li>
+                        <li><a href="pages/competencies.html#technology">Technology</a></li>
+                        <li><a href="pages/competencies.html#reflection">Reflection</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/project.html">Mentored Project</a></li>
+                <li><a href="pages/coursework.html">Coursework</a></li>
+                <li><a href="pages/workshops.html">Workshops & Seminars</a></li>
+                <li><a href="pages/reflections.html">Reflections</a></li>
+                <li><a href="pages/cv.html">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="container">
+            <section class="intro">
+                <h2>Welcome to My Teaching Portfolio</h2>
+                <p>This portfolio documents my journey through the Certificate in College Teaching program at Michigan State University. Here you'll find evidence of my development across five core teaching competencies, my teaching philosophy, and documentation of my mentored teaching experiences.</p>
+                
+                <!-- Quick Access Section -->
+                <h3>Portfolio Components</h3>
+                <div class="quick-links">
+                    <a href="pages/philosophy.html" class="card">
+                        <h3>📚 Teaching Philosophy</h3>
+                        <p>My approach to education and student engagement</p>
+                    </a>
+                    
+                    <a href="pages/competencies.html" class="card">
+                        <h3>🎯 Core Competencies</h3>
+                        <p>Evidence across five key teaching areas</p>
+                    </a>
+                    
+                    <a href="pages/project.html" class="card">
+                        <h3>🔬 Mentored Project</h3>
+                        <p>Designing innovative humanities education</p>
+                    </a>
+                    
+                    <a href="pages/coursework.html" class="card">
+                        <h3>📖 Teaching Coursework</h3>
+                        <p>EAD 871: Collegiate Contexts for Teaching & Learning</p>
+                    </a>
+                    
+                    <a href="pages/workshops.html" class="card">
+                        <h3>🏆 Workshops & Seminars</h3>
+                        <p>Professional development activities</p>
+                    </a>
+                    
+                    <a href="pages/reflections.html" class="card">
+                        <h3>💭 Reflections</h3>
+                        <p>Growth and insights from my teaching journey</p>
+                    </a>
+                </div>
+                
+                <!-- Competency Progress Tracker -->
+                <h3>Competency Development Progress</h3>
+                <div class="progress-tracker">
+                    <div class="competency-item">
+                        <span>Understanding How Students Learn</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="competency-item">
+                        <span>Creating Inclusive Learning Environments</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="competency-item">
+                        <span>Incorporating Assessment & Feedback</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="competency-item">
+                        <span>Using Technology Effectively</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="competency-item">
+                        <span>Engaging in Reflection</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 88%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Charles H. Foster | Certificate in College Teaching | MSU</p>
+            <p>Built with HTML, CSS & JavaScript | <a href="https://github.com/[your-username]/teaching-portfolio">View Source</a></p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
