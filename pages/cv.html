@@ -3,17 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshops & Seminars - Harry M. Foster</title>
+    <title>Curriculum Vitae - Harry M. Foster</title>
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* CV-specific styles extending the site theme */
+        .cv-header-info {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #2d5a3d;
+        }
+
+        .cv-header-info p {
+            color: #b8b8b8;
+            margin-bottom: 0.25rem;
+        }
+
+        .cv-header-info a {
+            color: #7d9181;
+        }
+
+        .cv-section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(45, 90, 61, 0.3);
+        }
+
+        .cv-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .cv-section h3 {
+            color: #5d7260;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #2d5a3d;
+        }
+
+        .cv-subsection-heading {
+            color: #7d9181;
+            font-size: 1.05rem;
+            font-style: italic;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .cv-entry {
+            margin-bottom: 1.5rem;
+        }
+
+        .cv-entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.25rem;
+        }
+
+        .cv-entry-title {
+            color: #e8e8e8;
+            font-weight: 600;
+        }
+
+        .cv-entry-date {
+            color: #5d7260;
+            font-size: 0.9rem;
+            font-style: italic;
+            white-space: nowrap;
+        }
+
+        .cv-entry-subtitle {
+            color: #7d9181;
+            font-style: italic;
+            margin-bottom: 0.25rem;
+        }
+
+        .cv-entry-details {
+            color: #b8b8b8;
+            padding-left: 1.25rem;
+        }
+
+        .cv-entry-details li {
+            margin-bottom: 0.35rem;
+            list-style-type: disc;
+        }
+
+        .cv-publication {
+            color: #b8b8b8;
+            margin-bottom: 0.75rem;
+            padding-left: 2rem;
+            text-indent: -2rem;
+            line-height: 1.7;
+        }
+
+        .cv-publication em {
+            color: #a0a0a0;
+        }
+
+        .cv-simple-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cv-simple-list li {
+            color: #b8b8b8;
+            margin-bottom: 0.5rem;
+            padding-left: 1.25rem;
+            position: relative;
+        }
+
+        .cv-simple-list li::before {
+            content: '•';
+            color: #5d7260;
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .cv-entry-header {
+                flex-direction: column;
+            }
+
+            .cv-entry-date {
+                margin-top: 0.15rem;
+            }
+
+            .cv-publication {
+                padding-left: 1rem;
+                text-indent: -1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Workshops & Seminars</h1>
-            <p class="subtitle">Professional Development in Teaching</p>
+            <h1>Curriculum Vitae</h1>
+            <p class="subtitle">Harry M. Foster</p>
         </div>
     </header>
-    
+
     <nav>
         <div class="container">
             <ul>
@@ -22,39 +156,272 @@
                 <li><a href="competencies.html">Core Competencies</a></li>
                 <li><a href="project.html">Mentored Project</a></li>
                 <li><a href="coursework.html">Coursework</a></li>
-                <li><a href="workshops.html">Workshops & Seminars</a></li>
+                <li><a href="workshops.html">Workshops &amp; Seminars</a></li>
                 <li><a href="reflections.html">Reflections</a></li>
-                <li><a href="cv.html">CV</a></li>
+                <li><a href="cv.html" class="active">CV</a></li>
             </ul>
         </div>
     </nav>
-    
+
     <main>
         <div class="container">
-            <section class="intro">
-                <h2>Professional Development Activities</h2>
-                <p>This is everthing I've accomplished so far.</p>
-                
-                <div class="cv">
-                    <div class="cv">
-                        <h3>Charles H. Foster CV</h3>
-                        <p class="date">Date: Month Day, Year</p>
-                        <p>updated curriculum vitae.</p>
-                        <a href="../assets/certificate1.pdf" class="btn">View Certificate</a>
-                    </div>
-                    
-                    <!-- Add more workshop items as needed -->
+            <section class="content-section">
+
+                <!-- Contact Info -->
+                <div class="cv-header-info">
+                    <p><a href="mailto:Foste410@msu.edu">Foste410@msu.edu</a> &#124; <a href="https://www.linkedin.com/in/Charles-Harry-Foster" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in new tab)</span></a></p>
                 </div>
+
+                <!-- EDUCATION -->
+                <div class="cv-section">
+                    <h3>Education</h3>
+
+                    <div class="cv-entry">
+                        <div class="cv-entry-header">
+                            <span class="cv-entry-title">Michigan State University, East Lansing, MI</span>
+                            <span class="cv-entry-date">(Expected) April 2028</span>
+                        </div>
+                        <div class="cv-entry-subtitle">Doctor of Philosophy in English</div>
+                    </div>
+
+                    <div class="cv-entry">
+                        <div class="cv-entry-header">
+                            <span class="cv-entry-title">Columbia University, New York, NY</span>
+                            <span class="cv-entry-date">May 2023</span>
+                        </div>
+                        <div class="cv-entry-subtitle">Bachelor of Arts in English and Creative Writing</div>
+                        <p class="cv-entry-details" style="padding-left: 0;">Departmental Honors</p>
+                    </div>
+
+                    <div class="cv-entry">
+                        <div class="cv-entry-header">
+                            <span class="cv-entry-title">Saddleback College, Mission Viejo, CA</span>
+                            <span class="cv-entry-date">May 2020</span>
+                        </div>
+                        <div class="cv-entry-subtitle">Associate in Arts in English</div>
+                        <p class="cv-entry-details" style="padding-left: 0;">Honors Certification, Cum Laude</p>
+                    </div>
+                </div>
+
+                <!-- PUBLICATIONS -->
+                <div class="cv-section">
+                    <h3>Publications</h3>
+
+                    <p class="cv-subsection-heading">Academic Publications</p>
+
+                    <p class="cv-publication">Foster, Harry M. Review of <em>The Detroit Genre: Race, Dispossession, and Resilience in American Literature and Film, 1967–2023</em>, by Vincent Haddad. <em>Popular Culture Review</em>, October 2025.</p>
+
+                    <p class="cv-subsection-heading">Creative Publications — Fiction</p>
+
+                    <p class="cv-publication">Foster, Harry M. "Peanut Butter and Jelly." <em>Wall Literary Journal</em>, vol. 20, 2021, pp. 56–58.</p>
+
+                    <p class="cv-subsection-heading">Creative Publications — Poetry</p>
+
+                    <p class="cv-publication">Foster, Harry M. "From Ship to Shore," and "Midnight Movie Madness." <em>So Long: The Anthology of Poet Warrior Vol. III</em>. Dead Reckoning Collective, September 2025.</p>
+
+                    <p class="cv-publication">Foster, Harry M. "Dreaming While I'm Awake." <em>Wall Literary Journal</em>, vol. 19, 2020, pp. 18–19.</p>
+                </div>
+
+                <!-- CONFERENCE PRESENTATIONS -->
+                <div class="cv-section">
+                    <h3>Conference Presentations</h3>
+
+                    <p class="cv-publication">"Gendered Narratives and Cultural Inheritance: Race and Gender Bending in Comic Book Adaptation Casting." Modern Language Association Convention, San Francisco, CA, January 2026. (Panel: "Adaptation and Opposition through Comics")</p>
+
+                    <p class="cv-publication">"You're a Bad Hero, Hobie Brown: Reading Black Superheroes as Contemporary Folklore." MMUF NYC Regional Conference, New York, NY, 2022.</p>
+
+                    <p class="cv-publication">"With a Little Power, Comes Great Responsibility: How Hobie Brown's <em>The Prowler</em> Gives New Meaning to Mythic Heroism." Bay Honors Research Symposium, Berkeley, CA, 2020.</p>
+
+                    <p class="cv-publication">"With a Little Power, Comes Great Responsibility: The Application of Comic Book Heroes to Social Issues." IVC/SC Student Research Symposium, Irvine, CA, 2019.</p>
+
+                    <p class="cv-publication">"If You're Not First, You're Last: A Critique of Professional Athletics in Modern America and Soviet Russia." Saddleback College Undergraduate Research Conference, Mission Viejo, CA, 2019.</p>
+                </div>
+
+                <!-- TEACHING EXPERIENCE -->
+                <div class="cv-section">
+                    <h3>Teaching Experience</h3>
+
+                    <div class="cv-entry">
+                        <div class="cv-entry-header">
+                            <span class="cv-entry-title">Michigan State University</span>
+                            <span class="cv-entry-date">AY 2026–2027</span>
+                        </div>
+                        <div class="cv-entry-subtitle">Professor of Record</div>
+                        <ul class="cv-entry-details">
+                            <li>IAH 207: Literatures, Cultures, and Identities (AY 2026–2027)</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-entry">
+                        <div class="cv-entry-header">
+                            <span class="cv-entry-title">Michigan State University</span>
+                            <span class="cv-entry-date">Summer 2026</span>
+                        </div>
+                        <div class="cv-entry-subtitle">Professor of Record</div>
+                        <ul class="cv-entry-details">
+                            <li>ENG 142: Introduction to Popular Literary Genres (Summer 2026)</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-entry">
+                        <div class="cv-entry-header">
+                            <span class="cv-entry-title">Michigan State University</span>
+                            <span class="cv-entry-date">AY 2024–2025</span>
+                        </div>
+                        <div class="cv-entry-subtitle">Teaching Assistant</div>
+                        <ul class="cv-entry-details">
+                            <li>IAH 207: Literatures, Cultures, and Identities – "Afrofantastic: Race, Power, and Gender in the Black Imaginary" (Fall 2024)</li>
+                            <li>IAH 207: Literatures, Cultures, and Identities – "Things That Go Bump in the Night" (Spring 2025)</li>
+                            <li>Led weekly recitation sections for 90+ students</li>
+                            <li>Developed innovative AI literacy assignments</li>
+                            <li>Facilitated collaborative learning through group discussion leadership</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-entry">
+                        <div class="cv-entry-header">
+                            <span class="cv-entry-title">Warrior-Scholar Project</span>
+                            <span class="cv-entry-date">May 2021–Present</span>
+                        </div>
+                        <div class="cv-entry-subtitle">Humanities Fellow</div>
+                        <ul class="cv-entry-details">
+                            <li>Teach study techniques, analytical reading skills, and time management to veteran students</li>
+                            <li>Lead discussion groups in preparation for seminar and lecture</li>
+                            <li>Mentor and counsel individual program participants</li>
+                            <li>Coordinate with WSP staff and campus faculty to ensure program standards</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-entry">
+                        <div class="cv-entry-header">
+                            <span class="cv-entry-title">Columbia University Writing Center</span>
+                            <span class="cv-entry-date">September 2022–May 2023</span>
+                        </div>
+                        <div class="cv-entry-subtitle">Peer Writing Mentor</div>
+                        <ul class="cv-entry-details">
+                            <li>Helped undergraduate writers develop analytical reading skills</li>
+                            <li>Provided support for writers during consultation at various stages of writing</li>
+                            <li>Promoted diverse understandings of writing across disciplines</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-entry">
+                        <div class="cv-entry-header">
+                            <span class="cv-entry-title">Saddleback College Learning Resource Center</span>
+                            <span class="cv-entry-date">September 2018–March 2020</span>
+                        </div>
+                        <div class="cv-entry-subtitle">English Tutor</div>
+                        <ul class="cv-entry-details">
+                            <li>Tutored six classes based in English composition and academic research</li>
+                            <li>Planned and taught writing skill-based workshops</li>
+                            <li>Provided instructional support through embedded tutoring program</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- RESEARCH EXPERIENCE & FELLOWSHIPS -->
+                <div class="cv-section">
+                    <h3>Research Experience &amp; Fellowships</h3>
+
+                    <div class="cv-entry">
+                        <div class="cv-entry-header">
+                            <span class="cv-entry-title">Center for the Humanities and Social Sciences (Matrix)</span>
+                            <span class="cv-entry-date">AY 2025–2026</span>
+                        </div>
+                        <div class="cv-entry-subtitle">Research Assistant — Michigan State University</div>
+                    </div>
+
+                    <div class="cv-entry">
+                        <div class="cv-entry-header">
+                            <span class="cv-entry-title">Cultural Heritage Informatics Fellowship</span>
+                            <span class="cv-entry-date">2025–2026</span>
+                        </div>
+                        <div class="cv-entry-subtitle">Michigan State University</div>
+                        <ul class="cv-entry-details">
+                            <li>Built the Badman Digital Archive (<a href="https://detroit.badmandigitalarchive.com" target="_blank" rel="noopener noreferrer">detroit.badmandigitalarchive.com<span class="sr-only"> (opens in new tab)</span></a>), an interactive digital archive tracing the transformation of the Black Badman cultural archetype across media</li>
+                            <li>Developed digital methodologies for tracing cultural archetype transformation across literary, musical, and visual media</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-entry">
+                        <div class="cv-entry-header">
+                            <span class="cv-entry-title">Mellon Mays Undergraduate Fellowship</span>
+                            <span class="cv-entry-date">May 2021–May 2023</span>
+                        </div>
+                        <div class="cv-entry-subtitle">Columbia University</div>
+                        <ul class="cv-entry-details">
+                            <li>Conducted funded original research on Black superheroes as contemporary folklore</li>
+                            <li>Presented at regional conferences and developed senior thesis</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- EDITORIAL EXPERIENCE -->
+                <div class="cv-section">
+                    <h3>Editorial Experience</h3>
+
+                    <div class="cv-entry">
+                        <div class="cv-entry-header">
+                            <span class="cv-entry-title">Editor-in-Chief, <em>Wall Literary Journal</em> Vol. 19</span>
+                            <span class="cv-entry-date">January–December 2019</span>
+                        </div>
+                        <ul class="cv-entry-details">
+                            <li>Processed drafts submitted for publication</li>
+                            <li>Oversaw production and publication procedures</li>
+                            <li>Maintained editorial correspondence with prospective contributors</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- HONORS AND AWARDS -->
+                <div class="cv-section">
+                    <h3>Honors and Awards</h3>
+                    <ul class="cv-simple-list">
+                        <li>Cultural Heritage Informatics Fellowship, Michigan State University (2025)</li>
+                        <li>University Distinguished Fellowship, Michigan State University (2023)</li>
+                        <li>Beinecke Scholarship, Alternate (2022)</li>
+                        <li>Princeton PhD Preview Scholar (2021)</li>
+                        <li>First Place: "Peanut Butter and Jelly," Community College Humanities Association (2021)</li>
+                        <li>Inaugural Diana Davis Spencer Foundation Scholar (2021)</li>
+                        <li>First Place: <em>Wall Literary Journal</em> 2019, American Scholastic Press Association (2020)</li>
+                        <li>Warrior-Scholar Project Alumni, Columbia University Humanities Course (2019)</li>
+                    </ul>
+                </div>
+
+                <!-- PROFESSIONAL AFFILIATIONS -->
+                <div class="cv-section">
+                    <h3>Professional Affiliations</h3>
+                    <ul class="cv-simple-list">
+                        <li>Modern Language Association</li>
+                        <li>Popular Culture Association</li>
+                        <li>Comics Studies Society</li>
+                    </ul>
+                </div>
+
+                <!-- DIGITAL PROJECTS -->
+                <div class="cv-section">
+                    <h3>Digital Projects</h3>
+                    <p class="cv-publication">Badman Digital Archive (<a href="https://detroit.badmandigitalarchive.com" target="_blank" rel="noopener noreferrer">detroit.badmandigitalarchive.com<span class="sr-only"> (opens in new tab)</span></a>) — An interactive digital archive and timeline tracing the Black Badman archetype across American cultural production. Features interactive map, network visualization, and community repository.</p>
+                </div>
+
+                <!-- SERVICE -->
+                <div class="cv-section">
+                    <h3>Service</h3>
+                    <ul class="cv-simple-list">
+                        <li>U.S. Marine Corps, Combat Engineer, 1st Combat Engineer Battalion (2015–2018)</li>
+                    </ul>
+                </div>
+
             </section>
         </div>
     </main>
-    
+
     <footer>
         <div class="container">
             <p>&copy; 2025 Harry M. Foster | Certificate in College Teaching | MSU</p>
         </div>
     </footer>
-    
+
     <script src="../js/main.js"></script>
 </body>
 </html>
