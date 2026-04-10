@@ -3,14 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teaching Philosophy - Charles H. Foster</title>
+    <title>Teaching Philosophy - Harry M. Foster</title>
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Teaching Philosophy Page Styles */
+
+        .philosophy-prose {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .philosophy-prose p {
+            color: #c8c8c8;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        /* Epigraph / Section Dividers */
+        .epigraph {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem 1.5rem;
+            position: relative;
+        }
+
+        .epigraph::before,
+        .epigraph::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 1px;
+            background: #5d7260;
+            margin: 0 auto;
+        }
+
+        .epigraph::before {
+            margin-bottom: 1.5rem;
+        }
+
+        .epigraph::after {
+            margin-top: 1.5rem;
+        }
+
+        .epigraph-text {
+            font-size: 1.15rem;
+            font-style: italic;
+            color: #7d9181;
+            letter-spacing: 0.02em;
+            line-height: 1.6;
+        }
+
+        /* Image Gallery for Student Drawings */
+        .drawing-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(14, 30, 14, 0.6);
+            border-radius: 8px;
+            border: 1px solid #2d5a3d;
+        }
+
+        .drawing-gallery img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #2d5a3d;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .drawing-gallery img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 20px rgba(45, 90, 61, 0.4);
+        }
+
+        .gallery-caption {
+            grid-column: 1 / -1;
+            text-align: center;
+            color: #808080;
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+
+        /* Hover Footnotes */
+        .footnote-ref {
+            color: #7d9181;
+            cursor: help;
+            font-size: 0.75em;
+            vertical-align: super;
+            position: relative;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px dotted #5d7260;
+            padding: 0 2px;
+        }
+
+        .footnote-ref .footnote-tooltip {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            bottom: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%);
+            width: 320px;
+            background: #1a2f1a;
+            color: #b8b8b8;
+            padding: 0.85rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            vertical-align: baseline;
+            font-weight: 400;
+            font-style: normal;
+            border: 1px solid #2d5a3d;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            z-index: 200;
+            transition: opacity 0.2s, visibility 0.2s;
+            pointer-events: none;
+        }
+
+        .footnote-ref .footnote-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: #2d5a3d;
+        }
+
+        .footnote-ref:hover .footnote-tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Responsive tooltip positioning */
+        @media (max-width: 768px) {
+            .footnote-ref .footnote-tooltip {
+                width: 260px;
+                left: 0;
+                transform: translateX(-40%);
+            }
+
+            .drawing-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            }
+
+            .drawing-gallery img {
+                height: 140px;
+            }
+        }
+
+        /* Image lightbox overlay */
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .lightbox-overlay.active {
+            display: flex;
+        }
+
+        .lightbox-overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 0 40px rgba(45, 90, 61, 0.3);
+        }
+
+        /* Formula highlight box */
+        .formula-box {
+            background: linear-gradient(145deg, rgba(26, 71, 42, 0.15), rgba(14, 30, 14, 0.4));
+            border-left: 3px solid #5d7260;
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .formula-box p {
+            color: #c8c8c8;
+            margin-bottom: 0;
+            font-size: 1.05rem;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
             <h1>Teaching Philosophy</h1>
-            <p class="subtitle">Charles H. Foster</p>
+            <p class="subtitle">Harry M. Foster</p>
         </div>
     </header>
     
@@ -18,11 +214,11 @@
         <div class="container">
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="philosophy.html">Teaching Philosophy</a></li>
+                <li><a href="philosophy.html" class="active" aria-current="page">Teaching Philosophy</a></li>
                 <li><a href="competencies.html">Core Competencies</a></li>
                 <li><a href="project.html">Mentored Project</a></li>
                 <li><a href="coursework.html">Coursework</a></li>
-                <li><a href="workshops.html">Workshops & Seminars</a></li>
+                <li><a href="workshops.html">Workshops &amp; Seminars</a></li>
                 <li><a href="reflections.html">Reflections</a></li>
                 <li><a href="cv.html">CV</a></li>
             </ul>
@@ -32,36 +228,102 @@
     <main>
         <div class="container">
             <section class="content-section">
-                <h2>My Teaching Philosophy</h2>
-                <div class="philosophy-card">
-                    <h3>🎓 Core Beliefs</h3>
-                    <p>[Your core educational beliefs will go here. This section will outline your fundamental approach to teaching and learning.]</p>
-                </div>
-                
-                <div class="philosophy-card">
-                    <h3>📚 Pedagogical Approach</h3>
-                    <p>[Your specific teaching methods and strategies. How you structure your classes and engage with material.]</p>
-                </div>
-                
-                <div class="philosophy-card">
-                    <h3>💡 Student Engagement</h3>
-                    <p>[How you connect with students and foster their learning. Your approach to mentorship and guidance.]</p>
-                </div>
-                
-                <div class="philosophy-card">
-                    <h3>🌟 Innovation in Teaching</h3>
-                    <p>[Your approach to incorporating new methods, technologies, and ideas into your teaching practice.]</p>
+                <div class="philosophy-prose">
+
+                    <!-- OPENING: THE FORMULA AS HOOK -->
+                    <p>Let&rsquo;s face it. These days, everyone could use a laugh. Fresh off my first semester as a TA at MSU, laughing at our pain was the very first thing I did on the very first day for each of my sections in IAH 207: &ldquo;Things that go bump in the night.&rdquo; I asked my students to share their names, their years, their majors, and one thing they&rsquo;re afraid of. The fear could be silly, irrational, or substantive. And like I learned in the military, I led by example when I shared both my silly fear (Kangaroos. I had no idea they would lure prey into the water and drown them. That is legitimately terrifying and I&rsquo;m never voluntarily going to Australia) and something more substantive (I&rsquo;m deeply afraid of personal success because there have been too many moments in my life where happiness arrived only for something to ruin it before or after.) What followed across all three sections were moments where my students shared silly (spiders), odd (getting in a car crash and someone films it while an embarrassing song plays), and down right chilling (getting kidnapped) fears. By the time we finished sharing, my students were empathetic with each other, open to the course material, and had a reasonable idea of how my classroom operates.</p>
+
+                    <div class="formula-box">
+                        <p>My teaching runs on a ratio of two parts humor, one part content, one part digital tools, and one part metacognition and reflection. Humor is the largest single ingredient because it pulls double duty. Humor is both the delivery mechanism that makes rigorous content accessible across different identities and experiences while also serving as the environment-builder that creates the space where students can take intellectual risks. The other three ingredients are what makes the classroom work. Disciplinary content provides students with intellectual substance. Digital tools extend the learning environment and experience beyond the brick and mortar while also providing literacy in cutting edge technology. Last, and most importantly, metacognition and reflection ensures students are constantly aware of both how and why they know what they know.</p>
+                    </div>
+
+                    <!-- EPIGRAPH: CONTENT -->
+                    <div class="epigraph">
+                        <p class="epigraph-text">The gap between enjoyment and analysis is where I do my best work.</p>
+                    </div>
+
+                    <!-- CONTENT: WHAT I TEACH AND WHY -->
+                    <p>To me, teaching has become this almost artful negotiation between understanding and tailoring content to an audience while also creating a physical and social environment with the most potential for learning to occur. I typically teach courses in popular culture, literature, speculative fiction, and other forms of generic content, things that students arrive already knowing and loving but rarely thinking critically about the effects it has on their personal development and society. English is what Neumann, Parry, and Becher call a &ldquo;soft pure&rdquo; discipline.<span class="footnote-ref">1<span class="footnote-tooltip">Ruth Neumann, Sharon Parry &amp; Tony Becher, &ldquo;Teaching and Learning in their Disciplinary Contexts: A Conceptual Analysis,&rdquo; <em>Studies in Higher Education</em> 27, no. 4 (2002): 405&ndash;417. Soft pure fields are reiterative, holistic, and qualitative, where knowledge-building is a formative process and teaching activities are largely constructive and interpretive.</span></span> It&rsquo;s reiterative, holistic, and qualitative and the goal is not the accumulation of fixed information but the development of critical perspectives. My courses are therefore organized around three main learning goals. First, I want students to read semiotically across media forms and develop a toolkit to interpret how signs, symbols, color, sound, and narrative structure create meaning, whether the text is a film, novel, hip-hop album, or a comic book. Second, I want students to understand how identities such as race, gender, or geographically bound culture become a cycle of consumption and experience via cultural products. Third, I want students to be able to write analytically about those first two things with the metacognitive awareness to examine how they arrived at their ideological positions and what interplay of assumptions, facts, and experiences shaped them.</p>
+
+                    <p>These goals are grounded in my conviction that the humanities teach a transferable mode of inquiry necessary to living an informed life. When my students learn to decode how Gothic horror uses specific color palettes and spatial aesthetics to produce feelings of dread, they are practicing the same interpretive skill set they will need to read a political advertisement, evaluate a news program, or recognize how a digital platform is structuring their attention. The content is only the vehicle that their analytical and reflective capacity allows them to steer.</p>
+
+                    <!-- EPIGRAPH: METHODS -->
+                    <div class="epigraph">
+                        <p class="epigraph-text">Play first, analyze second.</p>
+                    </div>
+
+                    <!-- HUMOR + METHODS: THE CLASSROOM IN ACTION -->
+                    <p>For example, in my Gothic horror unit, after a short lecture on aesthetics, semiotics, and color theory, I divided students into color-coded teams and gave each group the following prompt. Design something spooky (i.e. a haunted house, a mysterious toy, a terrifying location, a spooky transportation vehicle) and build it in Google Drawings using the vocabulary we had just covered. One of the Orange teams built a haunted tree-house with a grinning moon in high-saturation yellow against dark brown. A Purple Team rendered an entire Gothic mansion in a monochromatic palette with bats and a crescent moon. And the Green Team. My dear sweet Green Team drew a swamp creature that had the entire room in tears because no one could figure out if the fifth appendage was a tail or&hellip;something else. Each group then presented their creation and its lore to the class.</p>
+
+                    <!-- Student Drawings Gallery -->
+                    <div class="drawing-gallery">
+                        <img src="../assets/artifact_001.jpg" alt="Orange Team's haunted tree-house drawing featuring a grinning yellow moon against dark brown, built in Google Drawings during the Gothic horror unit" onclick="openLightbox(this)">
+                        <img src="../assets/artifact_003.jpg" alt="Purple Team's Gothic mansion drawn in a monochromatic purple palette with bats and a crescent moon" onclick="openLightbox(this)">
+                        <img src="../assets/artifact_002.jpg" alt="Green Team's swamp creature drawing that sparked a class-wide debate about its anatomy" onclick="openLightbox(this)">
+                        <p class="gallery-caption">Student group drawings from the Gothic horror unit, IAH 207. Each team applied semiotic and color theory vocabulary to design original spooky creations in Google Drawings.</p>
+                    </div>
+
+                    <p>After the applause and the roasting, I put the Gothic horror gender discussion on the screen: &ldquo;Many Gothic horror stories feature female protagonists trapped in eerie, oppressive environments. How does Gothic horror reflect historical fears and anxieties about gender roles?&rdquo; Now look at what you just built, I tell them. Who is trapped in your haunted house? Who is the victim in your story? While these questions also generated some humorous responses, we were also able to have a really productive and thought-provoking conversation about gender anxiety, body dysmorphia, and many other branching ideas. I&rsquo;ve kept every drawing because they&rsquo;ve become treasured artifacts of both my methods and of intellectual growth students made that semester.</p>
+
+                    <!-- EPIGRAPH: DIGITAL TOOLS -->
+                    <div class="epigraph">
+                        <p class="epigraph-text">Never name a tool without explaining what learning it enables.</p>
+                    </div>
+
+                    <!-- DIGITAL TOOLS: AI LITERACY -->
+                    <p>The structure was the same for my Afrofuturism recitations during Fall of 2024. Early in the semester, after we&rsquo;d built a shared vocabulary of Afrofuturism terms, I divided the class into three groups. Each group used a different generative AI platform and asked their assigned platform two questions. Can you outline an essay about the definition of Afrofuturism? Can you outline an essay describing Black speculative practice? Then each group answered four questions about what they received such as what information does it give you? What information does it leave out? How does it organize ideas? And what would be your &ldquo;humanistic&rdquo; revision? The students discovered that the AI outputs are competent but only reproduce surface-level definitions without any cultural specificity and they always organize information in the same logical sequence. The &ldquo;humanistic revision&rdquo; then forced students to evaluate and describe what humanistic inquiry contributes that computational and statistical pattern-matching can&rsquo;t replicate. The goal of the assignment wasn&rsquo;t to make students AI skeptics or AI enthusiasts but critical users who understand what these tools can and can&rsquo;t do. Beyond this assignment, digital platforms extend the classroom&rsquo;s atmosphere into the hours between sessions. Online discussion forums allow the energy of the room to continue after the fifty-minute class period. The general rule I follow is to never name a tool without explaining what learning it enables.</p>
+
+                    <!-- EPIGRAPH: METACOGNITION -->
+                    <div class="epigraph">
+                        <p class="epigraph-text">How do you know what you know?</p>
+                    </div>
+
+                    <!-- METACOGNITION AND REFLECTION -->
+                    <p>My background in the military, Warrior-Scholar Project, and the writing center taught me the importance of reflecting on the intellectual journey that led to the formation of an argument or belief. David Kolb&rsquo;s model of experiential learning&mdash;concrete experience, reflective observation, abstract conceptualization, active experimentation&mdash;offers the best conception of this process.<span class="footnote-ref">2<span class="footnote-tooltip">David A. Kolb, &ldquo;Learning Styles and Disciplinary Differences,&rdquo; in <em>The Modern American College</em>, ed. A. Chickering (San Francisco: Jossey-Bass, 1981), 232&ndash;255. Kolb&rsquo;s cycle describes learning as a continuous spiral of experience, reflection, conceptualization, and experimentation.</span></span> Whether it was learning how to build a bridge through a minefield, figuring out my reading strategies in undergrad, or walking a student through the first draft of their paper, I moved through a cycle of doing, reflecting, reconceiving, and trying again with each revolution changing how I understood both learning and teaching. Those experiences inform how I build metacognition into every lesson when I ask students to examine not just what they think but how they came to think it, and whether the ideas they&rsquo;re using are the right ones for the question they&rsquo;re asking. When I ask students to examine how they learn, I am also acknowledging that not everyone arrives through the same door.</p>
+
+                    <!-- EPIGRAPH: INCLUSIVE TEACHING -->
+                    <div class="epigraph">
+                        <p class="epigraph-text">Inclusive teaching is both a disposition and a set of deliberate, thoughtful practices that make visible what the institution leaves implicit.</p>
+                    </div>
+
+                    <!-- HIDDEN CURRICULUM AND INCLUSIVE PRACTICE -->
+                    <p>The hidden curriculum of higher education, as Gair and Mullins have documented, creates gaps between students based on familial class, race, and access to the unspoken codes of academic life.<span class="footnote-ref">3<span class="footnote-tooltip">Susan Gair &amp; Adrienne Mullins, &ldquo;Feeling Dejected, These Kids Just Don&rsquo;t Want to Engage: The Hidden Curriculum at Play in Classes with High Aboriginal and Torres Strait Islander Enrollment,&rdquo; <em>The International Journal of the First Year in Higher Education</em> 2, no. 2 (2011). Gair and Mullins demonstrate how institutional norms create invisible barriers for students from non-dominant backgrounds.</span></span> As a non-traditional first-generation college and graduate student, I am intimately familiar with these gaps. My own transition to graduate school succeeded primarily because of the extracurricular programs that taught me what the hidden curriculum concealed. Warrior-Scholar Project gave me the analytical reading skills and time management strategies that no one assumed a veteran would need to be taught. The Mellon Mays Undergraduate Fellowship provided faculty mentorship, professional socialization, and real funding that first-generation students rarely receive. Those programs changed my trajectory and taught me that inclusive teaching is both a disposition and a set of deliberate, thoughtful practices that make visible what the institution leaves implicit.</p>
+
+                    <!-- CLOSING: CALLBACK TO THE FORMULA -->
+                    <p>My generation, the millennials, have mastered the metamodern art of laughing at our pain. We&rsquo;ve figured out, by necessity, how to oscillate between acknowledging and sitting with the difficult things in life while also appreciating its hilarious irony. As such, I&rsquo;ve found that laughing has become integral to my teaching experience because it reminds me that growth, while sometimes quite painful, can be fun and positive. Moreover, it&rsquo;s become a practice that I model and encourage in my students so that they too can learn to laugh at their pain.</p>
+
                 </div>
             </section>
         </div>
     </main>
+
+    <!-- Lightbox for images -->
+    <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+        <img src="" alt="" id="lightbox-img">
+    </div>
     
     <footer>
         <div class="container">
-            <p>&copy; 2025 Charles H. Foster | Certificate in College Teaching | MSU</p>
+            <p>&copy; 2025 Harry M. Foster | Certificate in College Teaching | Michigan State University</p>
         </div>
     </footer>
     
-    <script src="../js/main.js"></script>
+    <script>
+        function openLightbox(imgEl) {
+            const overlay = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imgEl.src;
+            lightboxImg.alt = imgEl.alt;
+            overlay.classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
 </body>
 </html>
